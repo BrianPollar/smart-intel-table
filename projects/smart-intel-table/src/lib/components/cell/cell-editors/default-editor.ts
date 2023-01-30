@@ -5,7 +5,8 @@ import { Cell } from '../../../defines/data-set/cell.define';
 @Component({
   template: ''
 })
-export class DefaultEditorBase implements Ieditor {
+export class DefaultEditorBase
+implements Ieditor {
   @Input() cell: Cell;
   @Input() inputClass: string;
   @Output() stoppedEditingEvent = new EventEmitter<any>();

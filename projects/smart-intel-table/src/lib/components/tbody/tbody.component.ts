@@ -26,7 +26,6 @@ implements OnChanges {
   @Output() editRowSelect = new EventEmitter<any>();
   @Output() multipleSelectRow = new EventEmitter<any>();
   @Output() rowHover = new EventEmitter<any>();
-
   isMultiSelectVisible: boolean;
   showActionColumnLeft: boolean;
   showActionColumnRight: boolean;

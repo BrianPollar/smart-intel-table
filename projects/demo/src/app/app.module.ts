@@ -12,7 +12,7 @@ import { ScrollPositionDirective } from './theme/directives/scrollPosition.direc
 @NgModule({
   declarations: [
     AppComponent,
-    ScrollPositionDirective,
+    ScrollPositionDirective
   ],
   imports: [
     BrowserModule,
@@ -20,9 +20,9 @@ import { ScrollPositionDirective } from './theme/directives/scrollPosition.direc
     HttpClientModule,
     RouterModule.forRoot(routes, { useHash: true }),
     SmartIntelTableModule,
-    PagesModule,
+    PagesModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

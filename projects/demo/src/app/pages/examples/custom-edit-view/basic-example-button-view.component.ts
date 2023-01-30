@@ -12,7 +12,6 @@ implements IviewCell, OnInit {
   renderValue: string;
   @Input() value: string | number;
   @Input() rowData;
-
   @Output() save: EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
@@ -30,8 +29,8 @@ implements IviewCell, OnInit {
     <smart-intel-table [settings]="settings" [source]="data"></smart-intel-table>
   `,
 })
-export class BasicExampleButtonViewComponent implements OnInit {
-
+export class BasicExampleButtonViewComponent 
+implements OnInit {
   settings = {
     columns: {
       id: {

@@ -14,5 +14,4 @@ export class ColumnTitleComponent {
   @Input() column: Column;
   @Input() source: DataSource;
   @Output() sort = new EventEmitter<any>();
-
 }

@@ -23,7 +23,6 @@ implements OnChanges {
   @Output() edit = new EventEmitter<any>();
   @Output() delete = new EventEmitter<any>();
   @Output() editRowSelect = new EventEmitter<any>();
-
   isActionEdit: boolean;
   isActionDelete: boolean;
   editRowButtonContent: string;

@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
   `,
 })
 export class BasicExampleCustomActionsComponent {
-
   settings = {
     actions: {
       custom: [

@@ -1,12 +1,12 @@
 import { TactionPosition, TtableMode, TtableSelectMode } from '../types/union.types';
 
 export interface IsettingActions {
-  columnTitle: string;
-  add: boolean;
-  edit: boolean;
-  delete: boolean;
-  custom: any[];
-  position: TactionPosition; // left|right
+  columnTitle?: string;
+  add?: boolean;
+  edit?: boolean;
+  delete?: boolean;
+  custom?: any[];
+  position?: TactionPosition; // left|right
 }
 
 export interface ItableFilter {

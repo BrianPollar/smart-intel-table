@@ -17,7 +17,6 @@ import { DefaultEditorBase } from './default-editor';
 })
 export class CheckboxEditorComponent 
 extends DefaultEditorBase {
-
   constructor() {
     super();
   }

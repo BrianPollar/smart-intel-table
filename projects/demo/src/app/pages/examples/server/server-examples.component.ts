@@ -4,6 +4,4 @@ import { Component } from '@angular/core';
   selector: 'demo-server-examples',
   templateUrl: './server-examples.component.html'
 })
-export class ServerExamplesComponent {
-
-}
+export class ServerExamplesComponent { }
