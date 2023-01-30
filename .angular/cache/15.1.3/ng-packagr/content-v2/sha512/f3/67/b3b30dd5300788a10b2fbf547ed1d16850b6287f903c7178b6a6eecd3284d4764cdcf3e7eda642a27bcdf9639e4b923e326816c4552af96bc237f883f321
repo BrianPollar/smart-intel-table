@@ -1,0 +1,1 @@
+{"css":":host .smart-table-row.selected{background:rgba(0,0,0,.05)}:host .smart-table-row .smart-table-actions.smart-table-action-multiple-select{text-align:center}:host ::ng-deep smart-table-body-edit-delete a:first-child,:host ::ng-deep smart-table-body-create-cancel a:first-child{margin-right:.25rem}\n","warnings":[]}

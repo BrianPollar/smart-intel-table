@@ -1,0 +1,18 @@
+:host {
+  .smart-table-row {
+    &.selected {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    .smart-table-actions {
+      &.smart-table-action-multiple-select {
+        text-align: center;
+      }
+    }
+  }
+  ::ng-deep smart-table-body-edit-delete,
+  ::ng-deep smart-table-body-create-cancel {
+    a:first-child {
+      margin-right: 0.25rem;
+    }
+  }
+}

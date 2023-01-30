@@ -1,0 +1,7 @@
+// ...
+
+@Component({
+template: `    <smart-intel-table [settings]="settings"></smart-intel-table>
+ `
+})
+// ...

@@ -1,0 +1,27 @@
+<tr
+  smart-table-thead-titles-row
+  *ngIf="!isHideHeader"
+  class="smart-table-titles"
+  [grid]="grid"
+  [isAllSelected]="isAllSelected"
+  [source]="source"
+  (sort)="sort.emit($event)"
+  (selectAllRows)="selectAllRows.emit($event)"
+></tr>
+
+<tr
+  smart-table-thead-filters-row
+  *ngIf="!isHideSubHeader"
+  class="smart-table-filters"
+  [grid]="grid"
+  [source]="source"
+  (create)="create.emit($event)"
+  (filter)="filter.emit($event)"
+></tr>
+
+<tr
+  smart-table-thead-form-row
+  *ngIf="grid.createFormShown"
+  [grid]="grid"
+  [createConfirm]="createConfirm"
+></tr>

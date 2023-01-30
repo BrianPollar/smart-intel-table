@@ -1,0 +1,13 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/smart-intel-table",
+  "assets": [
+    "./assets/*"
+  ],
+  "allowedNonPeerDependencies": [
+    "lodash"
+  ],
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  }
+}

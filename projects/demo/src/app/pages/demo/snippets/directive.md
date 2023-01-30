@@ -1,0 +1,14 @@
+// ...
+
+@NgModule({
+imports: [
+// ...
+
+    SmartIntelTableModule,
+
+    // ...
+
+],
+declarations: [ ... ]
+})
+// ...

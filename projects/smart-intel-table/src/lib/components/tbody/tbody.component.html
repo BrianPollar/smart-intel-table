@@ -1,0 +1,103 @@
+<tr
+  *ngFor="let row of grid.getRows()"
+  (click)="userSelectRow.emit(row)"
+  (mouseover)="rowHover.emit(row)"
+  class="smart-table-row"
+  [className]="rowClassFunction(row)"
+  [ngClass]="{ selected: row.isSelected }"
+>
+  <td
+    *ngIf="isMultiSelectVisible"
+    class="smart-table-actions smart-table-action-multiple-select"
+    (click)="multipleSelectRow.emit(row)"
+  >
+    <input type="checkbox" class="form-control" [ngModel]="row.isSelected" />
+  </td>
+  <td
+    *ngIf="!row.isInEditing && showActionColumnLeft"
+    class="smart-table-actions"
+  >
+    <smart-table-body-custom
+      [grid]="grid"
+      (custom)="custom.emit($event)"
+      [row]="row"
+      [source]="source"
+    ></smart-table-body-custom>
+
+    <smart-table-body-edit-delete
+      [grid]="grid"
+      [deleteConfirm]="deleteConfirm"
+      [editConfirm]="editConfirm"
+      (edit)="edit.emit(row)"
+      (delete)="delete.emit(row)"
+      (editRowSelect)="editRowSelect.emit($event)"
+      [row]="row"
+      [source]="source"
+    >
+    </smart-table-body-edit-delete>
+  </td>
+  <td
+    *ngIf="row.isInEditing && showActionColumnLeft"
+    class="smart-table-actions"
+  >
+    <smart-table-body-create-cancel
+      [grid]="grid"
+      [row]="row"
+      [editConfirm]="editConfirm"
+    ></smart-table-body-create-cancel>
+  </td>
+  <td *ngFor="let cell of getVisibleCells(row.cells)">
+    <smart-intel-table-cell
+      [cell]="cell"
+      [grid]="grid"
+      [row]="row"
+      [isNew]="false"
+      [mode]="mode"
+      [editConfirm]="editConfirm"
+      [inputClass]="editInputClass"
+      [isInEditing]="row.isInEditing"
+    >
+    </smart-intel-table-cell>
+  </td>
+
+  <td
+    *ngIf="row.isInEditing && showActionColumnRight"
+    class="smart-table-actions"
+  >
+    <smart-table-body-create-cancel
+      [grid]="grid"
+      [row]="row"
+      [editConfirm]="editConfirm"
+    ></smart-table-body-create-cancel>
+  </td>
+
+  <td
+    *ngIf="!row.isInEditing && showActionColumnRight"
+    class="smart-table-actions"
+  >
+    <smart-table-body-custom
+      [grid]="grid"
+      (custom)="custom.emit($event)"
+      [row]="row"
+      [source]="source"
+    ></smart-table-body-custom>
+
+    <smart-table-body-edit-delete
+      [grid]="grid"
+      [deleteConfirm]="deleteConfirm"
+      [editConfirm]="editConfirm"
+      [row]="row"
+      [source]="source"
+      (edit)="edit.emit(row)"
+      (delete)="delete.emit(row)"
+      (editRowSelect)="editRowSelect.emit($event)"
+    >
+    </smart-table-body-edit-delete>
+  </td>
+</tr>
+
+<tr *ngIf="grid.getRows().length == 0">
+  <td [attr.colspan]="tableColumnsCount">
+    {{ noDataMessage }}
+  </td>
+</tr>

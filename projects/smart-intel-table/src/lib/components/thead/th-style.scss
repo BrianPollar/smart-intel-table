@@ -1,0 +1,14 @@
+.resize-holder {
+  background: transparent !important;
+  //width: 100vw !important;
+  //height: 100vh !important;
+  width: 4px;
+  min-height: 56px;
+  position: absolute;
+  margin-top: -35px;
+  margin-left: -15px;
+
+  &:hover {
+    cursor: col-resize;
+  }
+}
