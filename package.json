@@ -1,16 +1,17 @@
 {
   "name": "smart-intel-table",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build:demo": "ng build demo --aot --configuration=production",
-    "build:lib": "ng build smart-intel-table --configuration=production",
+    "build:demo": "ng build demo --aot --configuration production",
+    "build:lib": "ng build smart-intel-table --configuration production",
     "build:ci": "npm run build:demo && npm run build:lib",
     "docs:gh-pages": "npm run build:demo -- --base-href '/smart-intel-table/' && ngh --dir ./dist/demo",
     "test": "ng test",
     "release": "npm run build:lib && npm run publish",
-    "publish": "npm publish --access=public dist/smart-intel-table",
+    "publishGitAll": "npm publish --access=public dist/smart-intel-table",
+    "publishGitSingle": "cd dist/smart-intel-table && npm publish",
     "changelog": "standard-changelog -p angular",
     "lint": "ng lint",
     "e2e": "ng e2e"
